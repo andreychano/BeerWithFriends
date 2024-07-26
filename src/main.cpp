@@ -3,7 +3,8 @@
 #include <array>
 
 struct mateCal {
-  uint8_t date[5];
+  uint8_t date[5]; // массив из 5 недель
+                    // TODO прикрутить метки месяца и года
 };
 
 using namespace std;
@@ -14,7 +15,7 @@ int main(){
     array<uint8_t, 8> bitValues;
 
         mateCal mark;
-        mark.date[0] = 0b11001100;
+        mark.date[0] = 0b11001100;  // первые 7 бит дни недели. 1 есть свободное время, 0 свободного  времени нет.
         mark.date[1] = 0b00110011;
         mark.date[2] = 0b11001100;
         mark.date[3] = 0b00110011;
